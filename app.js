@@ -7,7 +7,6 @@ const limit = 10
 const genRandomNum = () => {
   sortedNumbers.length === limit && sortedNumbers.splice(0, limit)
   const n = Math.ceil(Math.random() * limit)
-  console.log(n, sortedNumbers)
 
   if (sortedNumbers.includes(n)) {
     return genRandomNum()
@@ -33,7 +32,6 @@ const tryButton = $('.try')
 const resetButton = $('.reset')
 
 tryButton.onclick = () => {
-  console.log(randomNum)
   const number = parseInt($('input').value)
   if (!number) {
     text.textContent = '¡Ingresa un número!'
